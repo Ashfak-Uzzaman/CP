@@ -1,0 +1,50 @@
+                |       map           | unordered_map
+---------------------------------------------------------
+Ordering        | increasing order    | no ordering
+                | of keys(by default) |
+
+Implementation  | Self balancing BST  | Hash Table
+                | like Red-Black Tree |  
+
+search time     | log(n)              | O(1) -> Average 
+                |                     | O(n) -> Worst Case
+
+Insertion time  | log(n) + Rebalance  | Same as search
+                      
+Deletion time   | log(n) + Rebalance  | Same as search
+
+
+/***********************************************************\
+
+Map	  
+Multimap
+1	It stores unique key-value pair where each key is unique.	
+    It can store duplicate key-value pair where keys may not be unique.
+2	Using count() function on a map can only return two values which is either 0 or 1.	
+    Using count() function on a multimap can return any non-negative integer.
+3	Accessing Value of any key is easy and directly accessible.	
+    Accessing value of any key is not easy and is not directly accessible.
+4	Deleting in a map using key will delete only one key-value pair.	
+    Deleting in a multimap using key will delete all the key-value pair having same key.
+5	Map can be used when a simple look up table having unique key-value pairs is required for quickly accessing to the value using 
+the key.	
+    Multimap can be used when grouping of values together using the keys are required.
+
+
+///////////////////////////////////////////Multimap///////////////////////////
+Inserting elements: O(log n) time complexity for each insertion operation, where n is the number of elements in the multimap. O(1)
+space complexity for each insertion operation.
+Printing the multimap: O(n) time complexity, where n is the number of elements in the multimap. O(1) space complexity.
+Adding elements: O(log n) time complexity for each insertion operation, where n is the number of elements in the multimap. O(1) 
+space complexity for each insertion operation.
+Assigning elements from one multimap to another: O(n) time complexity, where n is the number of elements being assigned. O(n) 
+space complexity, where n is the number of elements being assigned.
+Removing elements up to a certain key: O(log n) time complexity, where n is the number of elements in the multimap. O(1) space 
+complexity.
+Removing elements with a certain key: O(log n) time complexity, where n is the number of elements in the multimap. O(1) space 
+complexity.
+Finding the lower bound and upper bound of a key: O(log n) time complexity, where n is the number of elements in the multimap. 
+O(1) space complexity.
+Overall, the time complexity of the program is dominated by the logarithmic time complexity of the insertion and removal operations,
+as well as the lower and upper bound operations. The space complexity is linear in the number of elements being assigned from one 
+multimap to another.
